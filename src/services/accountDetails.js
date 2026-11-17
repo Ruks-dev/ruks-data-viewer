@@ -58,7 +58,7 @@ function generateResult(mockType, parameters) {
       return {
         customer_no: parameters.CustomerNo,
         signature: faker.image.avatar(),
-        (['Available', 'Pending verification']),
+        signature_status: faker.helpers.arrayElement(['Available', 'Pending verification']),
         document_id: `SIG-${faker.string.alphanumeric(10).toUpperCase()}`,
         last_updated: formatDate(faker.date.recent({ days: 180 })),
       }
