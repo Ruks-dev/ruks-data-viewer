@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "endpoints": [
+   {
+  "id": "account-details",
+  "label": "Account details",
+  "method": "GET",
+  "path": "/AccountDetails",
+  "mockType": "accountDetails",
+  "parameters": [
+    {
+      "name": "AccountNo",
+      "label": "Account number",
+      "placeholder": "10-digit account number",
+      "required": true,
+      "digitsOnly": true,
+      "minLength": 10,
+      "maxLength": 10
+    }
+  ]
+},
+    {
+      "id": "transaction-details",
+      "label": "Transaction details",
+      "method": "GET",
+      "path": "/TransactionDetails",
+      "mockType": "transactions",
+      "parameters": [
+        { "name": "AccountNo", "label": "Account number", "placeholder": "10-digit account number", "required": true, "digitsOnly": true, "minLength": 10, "maxLength": 10 },
+        { "name": "Count", "label": "Number of transactions", "placeholder": "10",  "type": "number", "required": false }
+      ]
+    },
+    {
+      "id": "transaction-count",
+      "label": "Transaction count",
+      "method": "GET",
+      "path": "/TransactionCount",
+      "mockType": "transactionCount",
+      "parameters": [
+        { "name": "AccountNo", "label": "Account number", "placeholder": "10-digit account number",  "required": true, "digitsOnly": true, "minLength": 10, "maxLength": 10 }
+      ]
+    },
+    {
+      "id": "signatories",
+      "label": "Signatories",
+      "method": "GET",
+      "path": "/Signatories",
+      "mockType": "signatories",
+      "parameters": [
+        { "name": "AccountNo", "label": "Account number", "placeholder": "10-digit account number",  "required": true, "digitsOnly": true, "minLength": 10, "maxLength": 10 }
+      ]
+    },
+    {
+      "id": "other-accounts",
+      "label": "List other accounts",
+      "method": "GET",
+      "path": "/OtherAccounts",
+      "mockType": "otherAccounts",
+      "parameters": [
+        { "name": "CustomerNo", "label": "Customer number", "placeholder": "Customer number",  "required": true }
+      ]
+    },
+    {
+      "id": "accounts-by-identifier",
+      "label": "List accounts by identifier",
+      "method": "GET",
+      "path": "/ListAccounts",
+      "mockType": "accountsByIdentifier",
+      "parameters": [
+        { "name": "IdentifierType", "label": "Identifier type", "type": "select", "options": ["BVN", "NIN", "RCNo"], "defaultValue": "BVN", "required": true },
+        { "name": "Identifier", "label": "Identifier value", "placeholder": "Enter BVN, NIN, or RC number", "required": true }
+      ]
+    },
+    {
+      "id": "customer-indebtedness",
+      "label": "Customer indebtedness",
+      "method": "GET",
+      "path": "/CustomerIndebtedness",
+      "mockType": "customerIndebtedness",
+      "parameters": [
+        { "name": "CustomerNo", "label": "Customer number", "placeholder": "Customer number",  "required": true }
+      ]
+    },
+    {
+      "id": "customer-signature",
+      "label": "Customer signature",
+      "method": "GET",
+      "path": "/CustomerSignature",
+      "mockType": "customerSignature",
+      "parameters": [
+        { "name": "CustomerNo", "label": "Customer number", "placeholder": "Customer number",  "required": true }
+      ]
+    },
+    {
+      "id": "pending-debits",
+      "label": "Pending debits",
+      "method": "GET",
+      "path": "/PendingDebits",
+      "mockType": "pendingDebits",
+      "parameters": [
+        { "name": "AccountNo", "label": "Account number", "placeholder": "10-digit account number",  "required": true, "digitsOnly": true, "minLength": 10, "maxLength": 10 }
+      ]
+    }
+  ]
+}
